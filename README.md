@@ -39,7 +39,7 @@ The project includes a suite of **153 unit tests** with a 100% success rate, cov
 * Model and controller logic.
 * Automation engine and complex rules.
 * Interface and input validation.
-* **Stress Tests**: Verification of resilience with 1,000 users, 500 houses, and 5,000 devices, along with memory leak testing and fuzzing with giant strings.
+* **Stress Tests**: Verification of resilience with 5,000 users, 500 houses, 1000 divisons and 5,000 devices, along with memory leak testing and fuzzing with giant strings.
 
 ## 📋 How to Run
 
