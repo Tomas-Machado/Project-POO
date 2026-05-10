@@ -35,7 +35,7 @@ The project follows the **MVC (Model-View-Controller)** pattern to ensure separa
 
 ## 🧪 Testing and Robustness
 
-The project includes a suite of **155 unit tests** with a 100% success rate, covering:
+The project includes a suite of **153 unit tests** with a 100% success rate, covering:
 * Model and controller logic.
 * Automation engine and complex rules.
 * Interface and input validation.
@@ -46,9 +46,9 @@ The project includes a suite of **155 unit tests** with a 100% success rate, cov
 Ensure you have Java installed.
 
 1. **Compile the project**:
-   ```Bash
-   make compile
-   ```
+```Bash
+make compile
+```
 Run the application:
 
 ```Bash
