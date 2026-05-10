@@ -1,86 +1,87 @@
-# Project-POO
-Sistema de gestão de dispositivos inteligentes desenvolvido no âmbito da Unidade Curricular de **Programação Orientada aos Objetos (POO)** na Universidade do Minho (2025/2026).
+# Domus Control - Home Assistant
 
-O **Domus Control** permite aos utilizadores gerir as suas casas inteligentes, organizando-as por divisões e associando diversos tipos de dispositivos conectados, com suporte para automações, cenários e escalonamentos temporais.
+Smart device management system developed as part of the **Object-Oriented Programming (OOP)** course at the University of Minho (2025/2026).
 
-## 🚀 Funcionalidades Principais
+**Domus Control** allows users to manage their smart homes, organizing them into divisions and associating various types of connected devices, with support for automations, scenarios, and time-based scheduling.
 
-- **Gestão de Entidades**: Criação e gestão de Utilizadores, Casas, Divisões e Dispositivos.
-- **Hierarquia de Dispositivos**: Suporte para Lâmpadas, Tomadas, Cortinas, Colunas de Som, Portões de Garagem e Sensores (Luz e Água).
-- **Motor de Automação**: Configuração de regras baseadas em condições (ex: detetar chuva ou baixa luminosidade) que disparam ações automáticas.
-- **Cenários**: Execução de conjuntos de ações pré-definidas (ex: Modo Cinema, Sair de Casa).
-- **Escalonamentos**: Agendamento de ações pontuais ou em intervalos de tempo específicos.
-- **Persistência de Dados**: Salvaguarda e carregamento do estado completo da aplicação através de serialização de objetos.
-- **Estatísticas**: Análise de consumo energético, dispositivos mais utilizados e divisões com maior densidade de hardware.
+## 🚀 Key Features
 
-## 🛠️ Tecnologias Utilizadas
+* **Entity Management**: Creation and management of Users, Houses, Divisions, and Devices.
+* **Device Hierarchy**: Support for Lamps, Smart Plugs, Curtains, Speakers, Garage Gates, and Sensors (Light and Water).
+* **Automation Engine**: Configuration of rules based on conditions (e.g., detecting rain or low light) that trigger automatic actions.
+* **Scenarios**: Execution of predefined sets of actions (e.g., "Movie Mode", "Leaving Home").
+* **Schedules**: Scheduling of one-time or time-interval actions.
+* **Data Persistence**: Saving and loading the application's full state through object serialization.
+* **Statistics**: Analysis of energy consumption, most-used devices, and divisions with the highest hardware density.
 
-- **Linguagem**: Java (JDK 17 ou superior)
-- **Testes Unitários**: JUnit 5
-- **Gestão de Build**: Makefile
-- **Documentação**: Javadoc
+## 🛠️ Technologies Used
 
-## 🏗️ Arquitetura do Sistema
+* **Language**: Java (JDK 17 or higher).
+* **Unit Testing**: JUnit 5.
+* **Build Management**: Makefile.
+* **Documentation**: Javadoc.
 
-O projeto segue o padrão **MVC (Model-View-Controller)** para garantir a separação de responsabilidades:
-- **Model**: Entidades base e lógica de negócio (`Utilizador`, `Casa`, `Dispositivo`, `Automacao`).
-- **View**: Interface de linha de comandos (CLI) interativa com suporte para cores ANSI e dashboards dinâmicos.
-- **Controller**: Classe central `DomusControl` que atua como fachada para a gestão do estado e execução de regras.
+## 🏗️ System Architecture
 
-Conceitos de POO aplicados:
-- **Encapsulamento**: Atributos privados com acesso via métodos públicos e princípios de \"Most Qualified Class\".
-- **Herança e Polimorfismo**: Hierarquia abstrata de dispositivos e ações.
-- **Abstração**: Uso de interfaces para condições e classes abstratas para componentes base.
+The project follows the **MVC (Model-View-Controller)** pattern to ensure separation of concerns:
+* **Model**: Base entities and business logic (`User`, `House`, `Device`, `Automation`).
+* **View**: Interactive command-line interface (CLI) with ANSI color support and dynamic dashboards.
+* **Controller**: `DomusControl` central class that acts as a facade for state management and rule execution.
 
-## 🧪 Testes e Robustez
+### Applied OOP Concepts:
+* **Encapsulation**: Private attributes with access through public methods and "Most Qualified Class" principles.
+* **Inheritance and Polymorphism**: Abstract hierarchy of devices and actions.
+* **Abstraction**: Use of interfaces for conditions and abstract classes for base components.
 
-O projeto inclui uma suite de **153 testes unitários** com 100% de sucesso, cobrindo:
-- Lógica de modelos e controladores.
-- Motor de automação e regras complexas.
-- Validação de interface e inputs.
-- **Testes de Stress**: Verificação de resiliência com 5000 utilizadores, 500 casas e 5000 dispositivos, além de testes de fuga de memória e fuzzing de strings gigantes.
+## 🧪 Testing and Robustness
 
-## 📋 Como Executar
+The project includes a suite of **155 unit tests** with a 100% success rate, covering:
+* Model and controller logic.
+* Automation engine and complex rules.
+* Interface and input validation.
+* **Stress Tests**: Verification of resilience with 1,000 users, 500 houses, and 5,000 devices, along with memory leak testing and fuzzing with giant strings.
 
-Certifique-se de que tem o Java instalado.
+## 📋 How to Run
 
-1.  **Compilar o projeto**:
-    ```bash
-    make compile
-    ```
+Ensure you have Java installed.
 
-2.  **Executar a aplicação**:
-    ```bash
-    make run
-    ```
+1. **Compile the project**:
+   ```Bash
+   make compile
+   ```
+Run the application:
 
-3.  **Correr os testes**:
-    ```bash
-    make test
-    ```
+```Bash
+make run
+```
+Run tests:
 
-## 📁 Estrutura de Diretórios
+```Bash
+make test
+```
 
-```text
+📁 Directory Structure
+```Plaintext
 .
 ├── src/
 │   ├── main/
-│   │   ├── automacao/    # Lógica de regras, cenários e escalonamentos
-│   │   ├── controller/   # Fachada DomusControl
-│   │   ├── Exceptions/   # Exceções personalizadas
-│   │   ├── model/        # Entidades do domínio
-│   │   └── view/         # Interface CLI e Menu
-│   └── test/             # Suite de testes JUnit 5
-├── bin/                  # Ficheiros compilados
-├── lib/                  # Bibliotecas externas (JUnit)
-├── Makefile              # Automação de tarefas
+│   │   ├── automacao/    # Rule logic, scenarios, and schedules
+│   │   ├── controller/   # DomusControl Facade
+│   │   ├── Exceptions/   # Custom exceptions
+│   │   ├── model/        # Domain entities
+│   │   └── view/         # CLI Interface and Menu
+│   └── test/             # JUnit 5 test suite
+├── bin/                  # Compiled files
+├── lib/                  # External libraries (JUnit)
+├── Makefile              # Task automation
 └── README.md
+```
 
-👥 Autores - Grupo 8
+👥 Authors - Group 8
 Carlos Martins (A109507)
 
 Diogo Vieira (A109744)
 
 Tomás Machado (A104186)
 
-Projeto desenvolvido para a UC de Programação Orientada aos Objetos - Universidade do Minho.
+Project developed for the Object-Oriented Programming course - University of Minho.
