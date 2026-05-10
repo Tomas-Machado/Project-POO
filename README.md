@@ -34,11 +34,11 @@ Conceitos de POO aplicados:
 
 ## 🧪 Testes e Robustez
 
-O projeto inclui uma suite de **155 testes unitários** com 100% de sucesso, cobrindo:
+O projeto inclui uma suite de **153 testes unitários** com 100% de sucesso, cobrindo:
 - Lógica de modelos e controladores.
 - Motor de automação e regras complexas.
 - Validação de interface e inputs.
-- **Testes de Stress**: Verificação de resiliência com 1000 utilizadores, 500 casas e 5000 dispositivos, além de testes de fuga de memória e fuzzing de strings gigantes.
+- **Testes de Stress**: Verificação de resiliência com 5000 utilizadores, 500 casas e 5000 dispositivos, além de testes de fuga de memória e fuzzing de strings gigantes.
 
 ## 📋 Como Executar
 
